@@ -44,7 +44,9 @@ marker.setMap(map);
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTuIWrhw0fZ_bF2tEg9PuvpAoKQTTuYE0&callback=myMap"></script>
 
 {% load widget_tweaks %}
-
+  <div class="container">
+<br>
+    <h3>Feedback</h3>
 <form method="post" novalidate>
   {% csrf_token %}
 
@@ -85,8 +87,10 @@ marker.setMap(map);
     </div>
   {% endfor %}
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
+<br>
+</div>
       <!--Mailform-->
       <!-- <section class="section section-md">
         <div class="container">
@@ -126,5 +130,5 @@ marker.setMap(map);
         </div>
       </section> -->
 
-
+</section>
 {%endblock%}
