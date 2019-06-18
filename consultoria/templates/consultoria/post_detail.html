@@ -1,0 +1,22 @@
+{% extends 'consultoria/skeleton.html' %}
+{% load static %}
+
+{% block content%}
+
+<section class="section section-lg bg-default">
+  <div class="container">
+    <div class="row row-50 flex-lg-row-reverse">
+
+      <div class="col-xl-12">
+
+        <h3>{{ post.title }}</h3> <h7>
+        <h7>{{ post.subtitle }}</h7>
+        <br>
+        <p>{{post.text}}</p>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+{%endblock%}

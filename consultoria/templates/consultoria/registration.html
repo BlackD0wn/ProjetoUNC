@@ -1,0 +1,19 @@
+{% extends 'consultoria/skeleton.html' %}
+
+{%block content%}
+<div class="container">
+    <div class="row row-50 flex-lg-row-reverse">
+
+      <div class="col-xl-12">
+
+        <h2>Cadastrar</h2>
+        <form method="post">
+          {% csrf_token %}
+          {{ form.as_ul  }}
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br>
+{%endblock%}

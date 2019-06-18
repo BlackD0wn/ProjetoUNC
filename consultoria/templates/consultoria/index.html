@@ -1,0 +1,226 @@
+{% extends 'consultoria/skeleton.html' %}
+{% load static %}
+
+{% block content%}
+      <!--Swiper-->
+      <section class="section swiper-container swiper-slider swiper-slider-1" data-loop="true" data-autoplay="false" data-simulate-touch="false" data-slide-effect="fade">
+        <div class="swiper-wrapper text-center text-lg-left">
+          <div class="swiper-slide" data-slide-bg="{%static 'images/slide-1.png'%}">
+            <div class="swiper-slide-caption">
+              <div class="container">
+                <div class="row justify-content-end">
+                  <div class="col-lg-7 col-xl-6">
+                    <h1 class="text-primary" data-caption-animate="fadeIn" data-caption-delay="100">Temos tudo que seu negocio precisa!</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" data-slide-bg="{% static 'images/slide-2.jpg'%}">
+            <div class="swiper-slide-caption">
+              <div class="container">
+                <div class="row justify-content-end">
+                  <div class="col-lg-7 col-xl-6">
+                    <h1 class="text-primary" data-caption-animate="fadeIn" data-caption-delay="100">As melhores estratégias para você</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" data-slide-bg="{% static 'images/slide-3.jpg'%}">
+            <div class="swiper-slide-caption">
+              <div class="container">
+                <div class="row justify-content-end">
+                  <div class="col-lg-7 col-xl-6">
+                    <h1 class="text-primary" data-caption-animate="fadeIn" data-caption-delay="100">Servimos empresas do mundo todo</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Swiper Pagination-->
+        <div class="swiper-pagination"></div>
+        <!--Swiper Navigation-->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </section>
+      <!--About-->
+      <section class="section section-lg section-inset-1 position-relative index-1">
+        <div class="container offset-negative-1">
+          <div class="row no-gutters">
+            <div class="col-sm-6 col-lg-3 wow fadeInUp">
+              <article class="box-default box-default-3">
+                <div class="box-default-icon fa-globe"></div>
+                <h4 class="box-default-title">Pesquisas <br>globais</h4>
+                <div class="box-default-text">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay=".05s">
+              <article class="box-default box-default-2">
+                <div class="box-default-icon fa-lightbulb-o"></div>
+                <h4 class="box-default-title">Ideias <br>criativas</h4>
+                <div class="box-default-text">Experimentum grauiter ducunt ad azureus terror. Hercle, omnia altus!, gratis olla! Hilotae nobilis habena est. Ubi est bassus urbs? Cum adgium prarere, omnes lapsuses.</div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay=".1s">
+              <article class="box-default box-default-1">
+                <div class="box-default-icon fa-cog"></div>
+                <h4 class="box-default-title">Soluções <br>baratas</h4>
+                <div class="box-default-text">Nunquam convertam exemplar. Magnum exemplar diligenter attrahendams parma est. Apolloniates undas, tanquam pius mensa. Triticums.</div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay=".15s">
+              <article class="box-default">
+                <div class="box-default-icon fa-briefcase"></div>
+                <h4 class="box-default-title"> <br>Profissionalismo</h4>
+                <div class="box-default-text">Ubi est lotus usus? Clemens, grandis castors sensim talem de pius, fortis lumen. Scutums sunt historias de pius gallus. Cum compater messis, omnes rumores vitare.</div>
+              </article>
+            </div>
+          </div>
+          <div class="row row-30 bordered">
+            <div class="col-md-6 wow fadeInRight">
+              <article class="box-minimal">
+                <div class="unit unit-spacing-md flex-column flex-sm-row text-center text-sm-left">
+                  <div class="unit-left">
+                    <div class="box-minimal-icon fa-comments"></div>
+                  </div>
+                  <div class="unit-body">
+                    <h4 class="box-minimal-title">Consultoria</h4>
+                    <div class="box-minimal-text">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor.</div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 wow fadeInRight" data-wow-delay=".05s">
+              <article class="box-minimal">
+                <div class="unit unit-spacing-md flex-column flex-sm-row text-center text-sm-left">
+                  <div class="unit-left">
+                    <div class="box-minimal-icon fa-group"></div>
+                  </div>
+                  <div class="unit-body">
+                    <h4 class="box-minimal-title">Time qualificado</h4>
+                    <div class="box-minimal-text">Barbatus, flavum genetrixs tandem amor de salvus, festus vortex. Audax, peritus spatiis saepe aperto de.</div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 wow fadeInRight" data-wow-delay=".1s">
+              <article class="box-minimal">
+                <div class="unit unit-spacing-md flex-column flex-sm-row text-center text-sm-left">
+                  <div class="unit-left">
+                    <div class="box-minimal-icon fa-calendar-o"></div>
+                  </div>
+                  <div class="unit-body">
+                    <h4 class="box-minimal-title">Trabalhos extensivos</h4>
+                    <div class="box-minimal-text">Fidess sunt ignigenas de secundus zirbus. A falsis, bubo fortis vita. Festus particula unus quaestios palus est.</div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 wow fadeInRight" data-wow-delay=".15s">
+              <article class="box-minimal">
+                <div class="unit unit-spacing-md flex-column flex-sm-row text-center text-sm-left">
+                  <div class="unit-left">
+                    <div class="box-minimal-icon fa-thumbs-up"></div>
+                  </div>
+                  <div class="unit-body">
+                    <h4 class="box-minimal-title">99% satisfação de nossos clientes</h4>
+                    <div class="box-minimal-text">Amicitia moris, tanquam brevis mons. Sunt sensoremes experientia barbatus, castus cannabises. Varius palus.</div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row row-30">
+            <div class="col-md-6 col-lg-4 wow fadeInUp">
+              <h3>Sobre</h3><img src="{% static 'images/predio.jpg'%}" alt="" width="370" height="108"/>
+              <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu.<br>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p><a class="button button-primary" href="#">leia mais</a>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".05s">
+              <h3>Nosso serviços</h3>
+              <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <ul class="list-marked-1">
+
+                {% for service in services %}
+
+                <li><a href="{% url 'service_detail' pk=service.pk %}">{{service.name}}</a></li>
+
+              {%endfor%}
+
+              </ul><a class="button button-primary" href="#">leia mais</a>
+            </div>
+            <div class="col-lg-4">
+              <div class="row row-30">
+                <div class="col-md-6 col-lg-12 wow fadeInUp" data-wow-delay=".1s">
+                  <div class="info">
+                    <div class="info-header">
+                      <div class="icon fa-comment"></div>
+                      <h3>Fale conosco</h3>
+                    </div>
+                    <div class="info-item">
+                      <h4 class="info-title">Fale conosco:</h4>
+                      <ul class="info-list">
+                        <li>Segunda - Sexta: 08h - 19h</li>
+                        <li>Sabado: 08h - 17h</li>
+                        <li>Domingo: 13h - 17h</li>
+                      </ul>
+                    </div>
+                    <div class="info-item">
+                      <h4 class="info-title">Suporte 24/7:</h4><a class="info-link" href="tel:#">800-4002-8922</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 wow fadeInUp" data-wow-delay=".1s">
+                  <div class="owl-carousel owl-style-1" data-items="1" data-dots="true" data-autoplay="true">
+                    <!-- Quote-->
+                    <article class="quote">
+                      <div class="media"><img class="quote-image" src="{%static 'images/user-1-80x80.jpg'%}" alt="" width="80" height="40"/>
+                        <div class="media-body">
+                          <div class="quote-text">
+                            <p class="q">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                          </div><a class="quote-author" href="#">Richard Curtis</a>
+                        </div>
+                      </div>
+                    </article>
+                    <!-- Quote-->
+                    <article class="quote">
+                      <div class="media"><img class="quote-image" src="{%static 'images/user-2-80x80.jpg'%}" alt="" width="80" height="40"/>
+                        <div class="media-body">
+                          <div class="quote-text">
+                            <p class="q">Noster, regius omnias nunquam magicae de fidelis, azureus secula. Accelerare satis ducunt ad magnum abactus.</p>
+                          </div><a class="quote-author" href="#">Anna Ramirez</a>
+                        </div>
+                      </div>
+                    </article>
+                    <!-- Quote-->
+                    <article class="quote">
+                      <div class="media"><img class="quote-image" src="{%static 'images/user-3-80x80.jpg'%}" alt="" width="80" height="40"/>
+                        <div class="media-body">
+                          <div class="quote-text">
+                            <p class="q">Nunquam acquirere gabalium. Mori satis ducunt ad teres stella. Studere satis ducunt ad brevis gluten.</p>
+                          </div><a class="quote-author" href="#">Eva Adams</a>
+                        </div>
+                      </div>
+                    </article>
+                    <!-- Quote-->
+                    <article class="quote">
+                      <div class="media"><img class="quote-image" src="{%static 'images/user-4-80x80.jpg'%}" alt="" width="80" height="40"/>
+                        <div class="media-body">
+                          <div class="quote-text">
+                            <p class="q">A falsis, amor brevis victrix. Cum tabes credere, omnes particulaes talem barbatus, audax hydraes.</p>
+                          </div><a class="quote-author" href="#">Walter Evans</a>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {% endblock %}
