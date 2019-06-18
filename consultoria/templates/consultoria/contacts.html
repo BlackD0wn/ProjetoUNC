@@ -9,92 +9,42 @@
         <!--Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.-->
         <!--Please note that YOUR_API_KEY should replaced with your key.-->
         <!--Example: <div class="google-map-container" data-key="YOUR_API_KEY">-->
-        <div class="google-map-container" data-center="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-zoom="5" data-icon="images/gmap_marker.png" data-icon-active="images/gmap_marker_active.png" data-styles="[{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#76aee3&quot;},{&quot;saturation&quot;:38},{&quot;lightness&quot;:-11},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#8dc749&quot;},{&quot;saturation&quot;:-47},{&quot;lightness&quot;:-17},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#c6e3a4&quot;},{&quot;saturation&quot;:17},{&quot;lightness&quot;:-2},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#cccccc&quot;},{&quot;saturation&quot;:-100},{&quot;lightness&quot;:13},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;administrative.land_parcel&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#5f5855&quot;},{&quot;saturation&quot;:6},{&quot;lightness&quot;:-31},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#ffffff&quot;},{&quot;saturation&quot;:-100},{&quot;lightness&quot;:100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[]}]">
+        <!-- <div class="google-map-container data" data-key="AIzaSyCTuIWrhw0fZ_bF2tEg9PuvpAoKQTTuYE0" data-center="R. Roberto Elke, 86 - Centro, Canoinhas - SC." data-zoom="5" data-icon="images/gmap_marker.png" data-icon-active="images/gmap_marker_active.png" data-styles="[{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#76aee3&quot;},{&quot;saturation&quot;:38},{&quot;lightness&quot;:-11},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#8dc749&quot;},{&quot;saturation&quot;:-47},{&quot;lightness&quot;:-17},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#c6e3a4&quot;},{&quot;saturation&quot;:17},{&quot;lightness&quot;:-2},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#cccccc&quot;},{&quot;saturation&quot;:-100},{&quot;lightness&quot;:13},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;administrative.land_parcel&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#5f5855&quot;},{&quot;saturation&quot;:6},{&quot;lightness&quot;:-31},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#ffffff&quot;},{&quot;saturation&quot;:-100},{&quot;lightness&quot;:100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[]}]">
           <div class="google-map"></div>
           <ul class="google-map-markers">
-            <li data-location="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-description="9870 St Vincent Place, Glasgow"></li>
+            <li data-location="R. Roberto Elke, 86 - Centro, Canoinhas - SC" data-description="R. Roberto Elke, 86 - Centro, Canoinhas - SC"></li>
           </ul>
         </div>
-      </section>
+      </section> -->
+
+      <div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+
+  center:new google.maps.LatLng(-26.100036, -50.391261),
+  zoom:17,
+};
+var marker = new google.maps.Marker({
+  position: mapProp.center,
+  // animation:google.maps.Animation.BOUNCE
+});
+
+var infowindow = new google.maps.InfoWindow({
+  content:"UNC"
+});
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+infowindow.open(map,marker);
+marker.setMap(map);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTuIWrhw0fZ_bF2tEg9PuvpAoKQTTuYE0&callback=myMap"></script>
+
       <!--Contacts-->
-      <section class="section section-lg bg-gray-700">
-        <div class="container">
-          <div class="row row-30">
-            <div class="col-lg-4">
-              <div class="row row-30">
-                <div class="col-sm-6 col-lg-12 wow fadeInRight">
-                  <article class="info-classic align-items-center">
-                    <div class="unit unit-spacing-md align-items-center flex-column flex-md-row text-center text-md-left">
-                      <div class="unit-left">
-                        <div class="info-classic-icon fa-map-marker"></div>
-                      </div>
-                      <div class="unit-body"><a class="info-classic-link" href="#">4578 Marmora Road,Glasgow D04 89GR</a></div>
-                    </div>
-                  </article>
-                </div>
-                <div class="col-sm-6 col-lg-12 wow fadeInRight" data-wow-delay=".05s">
-                  <article class="info-classic align-items-center">
-                    <div class="unit unit-spacing-md align-items-center flex-column flex-md-row text-center text-md-left">
-                      <div class="unit-left">
-                        <div class="info-classic-icon fa-envelope"></div>
-                      </div>
-                      <div class="unit-body"><a class="info-classic-link" href="mailto:#">info@demolink.org</a></div>
-                    </div>
-                  </article>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="row row-30">
-                <div class="col-sm-6 col-lg-12 wow fadeInRight" data-wow-delay=".1s">
-                  <article class="info-classic align-items-center info-classic-2">
-                    <div class="unit unit-spacing-md align-items-center flex-column flex-md-row text-center text-md-left">
-                      <div class="unit-left">
-                        <div class="info-classic-icon fa-phone"></div>
-                      </div>
-                      <div class="unit-body"><a class="info-classic-link" href="tel:#">800-2345-6789</a></div>
-                    </div>
-                  </article>
-                </div>
-                <div class="col-sm-6 col-lg-12 wow fadeInRight">
-                  <article class="info-classic align-items-center info-classic-2">
-                    <div class="unit unit-spacing-md align-items-center flex-column flex-md-row text-center text-md-left">
-                      <div class="unit-left">
-                        <div class="info-classic-icon fa-fax"></div>
-                      </div>
-                      <div class="unit-body"><a class="info-classic-link" href="tel:#">800-2345-6790</a></div>
-                    </div>
-                  </article>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="row row-30">
-                <div class="col-sm-6 col-lg-12 wow fadeInRight" data-wow-delay=".05s">
-                  <article class="info-classic align-items-center">
-                    <div class="unit unit-spacing-md align-items-center flex-column flex-md-row text-center text-md-left">
-                      <div class="unit-left">
-                        <div class="info-classic-icon fa-facebook"></div>
-                      </div>
-                      <div class="unit-body"><a class="info-classic-link" href="#">Follow on Facebook</a></div>
-                    </div>
-                  </article>
-                </div>
-                <div class="col-sm-6 col-lg-12 wow fadeInRight" data-wow-delay=".1s">
-                  <article class="info-classic align-items-center">
-                    <div class="unit unit-spacing-md align-items-center flex-column flex-md-row text-center text-md-left">
-                      <div class="unit-left">
-                        <div class="info-classic-icon fa-twitter"></div>
-                      </div>
-                      <div class="unit-body"><a class="info-classic-link" href="#">Follow on Twitter</a></div>
-                    </div>
-                  </article>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  
       <!--Mailform-->
       <section class="section section-md">
         <div class="container">
