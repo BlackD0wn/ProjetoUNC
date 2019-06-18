@@ -20,7 +20,20 @@ def about(request):
     return render(request, 'consultoria/about.html', {})
 
 def contacts(request):
-    return render(request, 'consultoria/contacts.html', {})
+
+    msg = "null"
+
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            contact = form.save(commit=False)
+            contact.save()
+            msg = "Formulario enviado com sucesso, entraremos em contato em breve"
+            form = ContactForm()
+    else:
+        form = ContactForm()
+
+    return render(request, 'consultoria/contacts.html', {'form':form, 'msg':msg})
 
 def post_list(request):
 

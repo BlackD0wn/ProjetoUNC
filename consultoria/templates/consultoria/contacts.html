@@ -43,13 +43,55 @@ marker.setMap(map);
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTuIWrhw0fZ_bF2tEg9PuvpAoKQTTuYE0&callback=myMap"></script>
 
-      <!--Contacts-->
-  
+{% load widget_tweaks %}
+
+<form method="post" novalidate>
+  {% csrf_token %}
+
+  {% for hidden_field in form.hidden_fields %}
+    {{ hidden_field }}
+  {% endfor %}
+
+  {% if form.non_field_errors %}
+    <div class="alert alert-danger" role="alert">
+      {% for error in form.non_field_errors %}
+        {{ error }}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% for field in form.visible_fields %}
+    <div class="form-group">
+      {{ field.label_tag }}
+
+      {% if form.is_bound %}
+        {% if field.errors %}
+          {% render_field field class="form-control is-invalid" %}
+          {% for error in field.errors %}
+            <div class="invalid-feedback">
+              {{ error }}
+            </div>
+          {% endfor %}
+        {% else %}
+          {% render_field field class="form-control is-valid" %}
+        {% endif %}
+      {% else %}
+        {% render_field field class="form-control" %}
+      {% endif %}
+
+      {% if field.help_text %}
+        <small class="form-text text-muted">{{ field.help_text }}</small>
+      {% endif %}
+    </div>
+  {% endfor %}
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
       <!--Mailform-->
-      <section class="section section-md">
+      <!-- <section class="section section-md">
         <div class="container">
           <h3>Feedback</h3>
-          <!--RD Mailform-->
+
           <form class="rd-mailform rd-form text-left" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
             <div class="row row-30">
               <div class="col-md-4">
@@ -82,7 +124,7 @@ marker.setMap(map);
             </div>
           </form>
         </div>
-      </section>
-    </div>
+      </section> -->
+
 
 {%endblock%}

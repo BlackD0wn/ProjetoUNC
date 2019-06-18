@@ -38,7 +38,8 @@ class Contact(models.Model):
     phone = models.CharField(validators=[phone_regex], max_length=17, blank=True)
     email = models.EmailField()
     text = models.TextField()
-    service = models.ForeignKey(Service, on_delete="CASCADE")
+    # shit implementation, but works
+    service = models.ForeignKey(Service, on_delete="CASCADE",null=True, blank=True)
 
     STATUS_CHOICES = (
         ("NOVO", "Novo"),
