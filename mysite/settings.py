@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'consultoria',
     'widget_tweaks',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [

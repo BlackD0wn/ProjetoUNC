@@ -10,5 +10,5 @@ urlpatterns = [
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
     path('services/<int:pk>/', views.service_detail, name='service_detail'),
 
-    path('accounts/registration/', views.registration, name='registration'),
+#    path('accounts/registration/', views.registration, name='registration'),
 ]

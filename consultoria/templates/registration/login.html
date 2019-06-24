@@ -1,10 +1,12 @@
 {% extends 'consultoria/skeleton.html' %}
 
+{% load crispy_forms_tags %}
+
 {%block content%}
 {% load widget_tweaks %}
   <div class="container">
 <br>
-    <h3>Registre-se</h3>
+    <h3>Login</h3>
 <form method="post" novalidate>
   {% csrf_token %}
 
